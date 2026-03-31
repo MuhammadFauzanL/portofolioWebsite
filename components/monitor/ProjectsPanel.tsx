@@ -60,9 +60,11 @@ export function ProjectsPanel({ isOpen, onClose }: ProjectsPanelProps) {
                         <a href={featured.github} target="_blank" rel="noopener noreferrer" className="link-btn">
                             GitHub →
                         </a>
-                        <a href={featured.demo} target="_blank" rel="noopener noreferrer" className="link-btn">
-                            Demo →
-                        </a>
+                        {featured.demo && featured.demo !== '#' && (
+                            <a href={featured.demo} target="_blank" rel="noopener noreferrer" className="link-btn">
+                                {(featured as { demoLabel?: string }).demoLabel ?? 'Demo'} →
+                            </a>
+                        )}
                     </div>
                 </div>
             )}
@@ -105,9 +107,11 @@ export function ProjectsPanel({ isOpen, onClose }: ProjectsPanelProps) {
                             <a href={project.github} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.7rem', padding: '4px 10px' }}>
                                 GitHub
                             </a>
-                            <a href={project.demo} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.7rem', padding: '4px 10px' }}>
-                                Demo
-                            </a>
+                            {project.demo && project.demo !== '#' && (
+                                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.7rem', padding: '4px 10px' }}>
+                                    {(project as { demoLabel?: string }).demoLabel ?? 'Demo'}
+                                </a>
+                            )}
                         </div>
                     </div>
                 ))}

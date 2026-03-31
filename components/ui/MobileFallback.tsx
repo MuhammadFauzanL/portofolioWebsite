@@ -78,10 +78,20 @@ export function MobileFallback() {
                             <p style={{ fontSize: '0.8rem', color: 'rgba(200,200,220,0.5)', lineHeight: '1.4', marginBottom: '10px' }}>
                                 {p.description}
                             </p>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '12px' }}>
                                 {p.tech.map((t, j) => (
                                     <span key={j} className="tech-tag" style={{ fontSize: '0.65rem' }}>{t}</span>
                                 ))}
+                            </div>
+                            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                                <a href={p.github} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.72rem', padding: '5px 12px' }}>
+                                    GitHub →
+                                </a>
+                                {p.demo && p.demo !== '#' && (
+                                    <a href={p.demo} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.72rem', padding: '5px 12px' }}>
+                                        {(p as { demoLabel?: string }).demoLabel ?? 'Demo'} →
+                                    </a>
+                                )}
                             </div>
                         </div>
                     ))}
