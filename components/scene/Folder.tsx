@@ -78,7 +78,10 @@ export function Folder({ activeSection, onActivate }: FolderProps) {
                         pointerEvents: 'auto',
                     }}
                 >
-                    <div style={{
+                    <div 
+                        onPointerDown={(e) => e.stopPropagation()}
+                        onClick={(e) => e.stopPropagation()}
+                        style={{
                         width: '480px',
                         maxHeight: '340px',
                         overflowY: 'auto',
@@ -91,6 +94,7 @@ export function Folder({ activeSection, onActivate }: FolderProps) {
                         scrollbarWidth: 'thin',
                         scrollbarColor: 'rgba(100,181,246,0.3) transparent',
                         paddingRight: '4px',
+                        pointerEvents: 'auto',
                     }}>
                         {/* Section label */}
                         <div style={{
@@ -149,15 +153,19 @@ export function Folder({ activeSection, onActivate }: FolderProps) {
                                     <a href={featured.github} target="_blank" rel="noopener noreferrer" style={{
                                         fontSize: '10px', color: '#64b5f6', textDecoration: 'none',
                                         padding: '4px 10px', border: '1px solid rgba(100,181,246,0.2)', borderRadius: '5px',
+                                        pointerEvents: 'auto',
                                     }}>
                                         GitHub →
                                     </a>
-                                    <a href={featured.demo} target="_blank" rel="noopener noreferrer" style={{
-                                        fontSize: '10px', color: '#81c784', textDecoration: 'none',
-                                        padding: '4px 10px', border: '1px solid rgba(129,199,132,0.2)', borderRadius: '5px',
-                                    }}>
-                                        Demo →
-                                    </a>
+                                    {featured.demo && featured.demo !== '#' && (
+                                        <a href={featured.demo} target="_blank" rel="noopener noreferrer" style={{
+                                            fontSize: '10px', color: '#81c784', textDecoration: 'none',
+                                            padding: '4px 10px', border: '1px solid rgba(129,199,132,0.2)', borderRadius: '5px',
+                                            pointerEvents: 'auto',
+                                        }}>
+                                            {(featured as { demoLabel?: string }).demoLabel ?? 'Demo'} →
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         )}
@@ -192,11 +200,22 @@ export function Folder({ activeSection, onActivate }: FolderProps) {
                                             </span>
                                         ))}
                                     </div>
-                                    <a href={p.github} target="_blank" rel="noopener noreferrer" style={{
-                                        fontSize: '9px', color: '#64b5f6', textDecoration: 'none',
-                                    }}>
-                                        GitHub →
-                                    </a>
+                                    <div style={{ display: 'flex', gap: '8px', marginTop: 'auto' }}>
+                                        <a href={p.github} target="_blank" rel="noopener noreferrer" style={{
+                                            fontSize: '9px', color: '#64b5f6', textDecoration: 'none',
+                                            pointerEvents: 'auto',
+                                        }}>
+                                            GitHub →
+                                        </a>
+                                        {p.demo && p.demo !== '#' && (
+                                            <a href={p.demo} target="_blank" rel="noopener noreferrer" style={{
+                                                fontSize: '9px', color: '#81c784', textDecoration: 'none',
+                                                pointerEvents: 'auto',
+                                            }}>
+                                                {(p as { demoLabel?: string }).demoLabel ?? 'Demo'} →
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                             ))}
                         </div>

@@ -157,9 +157,9 @@ export const portfolioData = {
         },
     ],
     contact: {
-        email: 'fauzanlubada@gmail.com',
+        email: 'fauzanlubada5@gmail.com',
         github: 'https://github.com/MuhammadFauzanL',
-        linkedin: 'https://linkedin.com/in/fauzanlubada',
+        linkedin: 'https://www.linkedin.com/in/muhammad-lubada160104 ',
         message: "I'm always open to discussing web development, data science, machine learning projects, and collaboration opportunities.",
     },
 };
