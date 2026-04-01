@@ -111,7 +111,7 @@ export function AboutSection() {
                         </div>
 
                         {/* Download CV */}
-                        <a href="#" className="btn-download">
+                        <a href="https://drive.google.com/file/d/1ZjYPaSfE4xhc0P1ljnGnHAoq6S5BlhNs/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-download">
                             📄 Download CV
                         </a>
                     </div>

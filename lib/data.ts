@@ -75,7 +75,7 @@ export const portfolioData = {
             description: 'A web application for health monitoring with reminder features and a structured, user-friendly dashboard. Implements full UI, API integration, and real-time data visualization.',
             tech: ['Laravel', 'Supabase', 'IoT', 'REST API'],
             github: 'https://github.com/MuhammadFauzanL/RemindersApp',
-            demo: 'https://reminders-app-one.vercel.app/',
+            demo: 'https://iot-healt.vercel.app/',
             featured: false,
         },
         {
@@ -83,8 +83,9 @@ export const portfolioData = {
             description: 'A mobile application featuring prayer schedules, Islamic content (duas, hadith, articles), bookmarking, and a simple chatbot. Designed in Figma and published to Play Store.',
             tech: ['Mobile Dev', 'UI/UX Design', 'Backend API', 'Figma'],
             github: 'https://github.com/MuhammadFauzanL/IslamicNoteApp',
-            demo: 'https://www.figma.com/design/Bi77SVqsFHOg71mtYO3nLb/Untitled?node-id=4-2119&t=AG8NfrSTCiCifMSj-1',
-            demoLabel: 'Figma Design',
+            demo: 'https://play.google.com/store/apps/details?id=com.informatika.islamicnote',
+            demoLabel: 'Play Store',
+            figma: 'https://www.figma.com/design/Bi77SVqsFHOg71mtYO3nLb/Untitled?node-id=4-2119&t=AG8NfrSTCiCifMSj-1',
             featured: false,
         },
         {

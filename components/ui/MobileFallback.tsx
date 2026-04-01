@@ -92,6 +92,11 @@ export function MobileFallback() {
                                         {(p as { demoLabel?: string }).demoLabel ?? 'Demo'} →
                                     </a>
                                 )}
+                                {(p as { figma?: string }).figma && (
+                                    <a href={(p as { figma?: string }).figma} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.72rem', padding: '5px 12px' }}>
+                                        Figma UI/UX →
+                                    </a>
+                                )}
                             </div>
                         </div>
                     ))}

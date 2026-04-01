@@ -65,6 +65,11 @@ export function ProjectsPanel({ isOpen, onClose }: ProjectsPanelProps) {
                                 {(featured as { demoLabel?: string }).demoLabel ?? 'Demo'} →
                             </a>
                         )}
+                        {(featured as { figma?: string }).figma && (
+                            <a href={(featured as { figma?: string }).figma} target="_blank" rel="noopener noreferrer" className="link-btn">
+                                Figma UI/UX →
+                            </a>
+                        )}
                     </div>
                 </div>
             )}
@@ -110,6 +115,11 @@ export function ProjectsPanel({ isOpen, onClose }: ProjectsPanelProps) {
                             {project.demo && project.demo !== '#' && (
                                 <a href={project.demo} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.7rem', padding: '4px 10px' }}>
                                     {(project as { demoLabel?: string }).demoLabel ?? 'Demo'}
+                                </a>
+                            )}
+                            {(project as { figma?: string }).figma && (
+                                <a href={(project as { figma?: string }).figma} target="_blank" rel="noopener noreferrer" className="link-btn" style={{ fontSize: '0.7rem', padding: '4px 10px' }}>
+                                    Figma UI/UX
                                 </a>
                             )}
                         </div>

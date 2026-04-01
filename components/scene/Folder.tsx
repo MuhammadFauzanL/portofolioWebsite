@@ -166,6 +166,15 @@ export function Folder({ activeSection, onActivate }: FolderProps) {
                                             {(featured as { demoLabel?: string }).demoLabel ?? 'Demo'} →
                                         </a>
                                     )}
+                                    {(featured as { figma?: string }).figma && (
+                                        <a href={(featured as { figma?: string }).figma} target="_blank" rel="noopener noreferrer" style={{
+                                            fontSize: '10px', color: '#ffb74d', textDecoration: 'none',
+                                            padding: '4px 10px', border: '1px solid rgba(255,183,77,0.2)', borderRadius: '5px',
+                                            pointerEvents: 'auto',
+                                        }}>
+                                            Figma UI/UX →
+                                        </a>
+                                    )}
                                 </div>
                             </div>
                         )}
@@ -213,6 +222,14 @@ export function Folder({ activeSection, onActivate }: FolderProps) {
                                                 pointerEvents: 'auto',
                                             }}>
                                                 {(p as { demoLabel?: string }).demoLabel ?? 'Demo'} →
+                                            </a>
+                                        )}
+                                        {(p as { figma?: string }).figma && (
+                                            <a href={(p as { figma?: string }).figma} target="_blank" rel="noopener noreferrer" style={{
+                                                fontSize: '9px', color: '#ffb74d', textDecoration: 'none',
+                                                pointerEvents: 'auto',
+                                            }}>
+                                                Figma UI/UX →
                                             </a>
                                         )}
                                     </div>
